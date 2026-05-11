@@ -14,7 +14,7 @@ OUTPUT_REPO = "P2SAMAPA/p2-etf-thermo-bottleneck-results"
 FI_COMMODITIES = ["TLT", "VCIT", "LQD", "HYG", "VNQ", "GLD", "SLV"]
 EQUITY_SECTORS = [
     "SPY", "QQQ", "XLK", "XLF", "XLE", "XLV", "XLI", "XLY", "XLP", "XLU",
-    "GDX", "XME", "IWF", "XSD", "XBI", "IWM", "IWD", "IWO"
+    "GDX", "XME", "IWF", "XSD", "XBI", "IWM"
 ]
 COMBINED = list(set(FI_COMMODITIES + EQUITY_SECTORS))
 
@@ -35,6 +35,7 @@ VIB_BETA = 0.5                               # IB trade‑off parameter
 TE_LAG = 1                                   # lag for transfer entropy
 MEP_BINS = 20                                # bins for KL estimation
 COLLAPSE_THRESHOLD = 1.0                     # score above which warning issued
+TOP_N_DESTAB = 3                             # number of highest‑risk ETFs to display
 
 # --- Output ---
 TODAY = datetime.now().strftime("%Y-%m-%d")
